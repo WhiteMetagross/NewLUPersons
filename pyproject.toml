@@ -1,0 +1,108 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NewLUPersons"
+version = "0.1.0"
+description = "NewLUPersons: A modern library for person re-identification based on LUPerson and newFastReID"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "NewLUPersons Contributors"},
+]
+keywords = [
+    "computer-vision",
+    "person-re-identification",
+    "deep-learning",
+    "pytorch",
+    "machine-learning",
+    "reid",
+    "person-search",
+    "image-retrieval",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    # Core PyTorch
+    "torch>=1.9.0",
+    "torchvision>=0.10.0",
+
+    # Core scientific computing
+    "numpy>=1.19.0",
+    "scipy>=1.5.0",
+    "scikit-learn>=0.24.0",
+
+    # Image processing
+    "Pillow>=8.0.0",
+    "opencv-python>=4.5.0",
+
+    # Visualization and plotting
+    "matplotlib>=3.3.0",
+
+    # Configuration management
+    "yacs>=0.1.8",
+    "pyyaml>=5.4.0",
+
+    # Utilities
+    "termcolor>=1.1.0",
+    "tabulate>=0.8.9",
+    "tqdm>=4.60.0",
+
+    # Deep learning utilities
+    "tensorboard>=2.5.0",
+
+    # File handling
+    "h5py>=3.1.0",
+]
+
+[project.optional-dependencies]
+# GPU support and similarity search
+gpu = [
+    "faiss-gpu>=1.7.0",
+]
+
+# CPU-only similarity search
+faiss = [
+    "faiss-cpu>=1.7.0",
+]
+
+# Development dependencies
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+]
+
+# All optional dependencies
+all = [
+    "NewLUPersons[gpu,faiss,dev]",
+]
+
+[project.urls]
+Homepage = "https://github.com/DengpanFu/LUPerson"
+Repository = "https://github.com/DengpanFu/LUPerson"
+"Bug Tracker" = "https://github.com/DengpanFu/LUPerson/issues"
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools.package-data]
+"*" = ["*.yml", "*.yaml"]
+

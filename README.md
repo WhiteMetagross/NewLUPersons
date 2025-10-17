@@ -1,6 +1,6 @@
 # NewLUPersons: A Modern Library for Person ReIdentification.
 
-**A modern, production-ready library for person reidentification based on [LUPerson](https://github.com/DengpanFu/LUPerson) and [newFastReID](https://github.com/WhiteMetagross/newFastReID).**
+**A modern, production ready library for person reidentification based on [LUPerson](https://github.com/DengpanFu/LUPerson) and [newFastReID](https://github.com/WhiteMetagross/newFastReID).**
 
 ---
 
